@@ -9,7 +9,7 @@ export default function () {
   const { user } = useContext(AppContext);
 
   const navigations: Nav[] = [
-    { name: "pricing", title: "价格", url: "/pricing", target: "_self" },
+    //{ name: "pricing", title: "价格", url: "/pricing", target: "_self" },
     {
       name: "doc",
       title: "定制微信红包封面",
@@ -58,18 +58,6 @@ export default function () {
                 <>
                   {user ? (
                     <>
-                      {user.credits && (
-                        <a
-                          href="/pricing"
-                          className="hidden md:block mr-8 font-normal text-gray-800 cursor-pointer"
-                        >
-                          额度:{" "}
-                          <span className="text-primary">
-                            {user.credits.left_credits}
-                          </span>
-                        </a>
-                      )}
-
                       <User user={user} />
                     </>
                   ) : (
